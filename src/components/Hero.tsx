@@ -10,7 +10,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/hero.mov" type="video/mp4" />
+        <source src="/Hero.mov" type="video/quicktime" />
       </video>
 
       {/* Dark Overlay */}
