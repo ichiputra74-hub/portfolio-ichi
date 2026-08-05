@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, MessageSquare } from 'lucide-react'
@@ -41,14 +42,16 @@ export default function Navbar({ contact }: { contact?: ContactData }) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="group flex flex-col">
-          <span className="font-serif text-2xl tracking-widest text-white group-hover:text-luxury-gold transition-colors">
-            LUXE<span className="text-luxury-gold">.</span>
-          </span>
-          <span className="text-[9px] tracking-ultra text-neutral-400 uppercase -mt-1">
-            CINEMATOGRAPHY
-          </span>
-        </Link>
+      <Link href="/" className="group flex items-center">
+  <Image
+    src="/Logo_ichi.png"
+    alt="Rizky Putra Logo"
+    width={180}
+    height={60}
+    priority
+    className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+  />
+</Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
