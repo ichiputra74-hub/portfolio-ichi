@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -27,23 +29,25 @@ export default function Hero() {
           Luxury Villa • Drone • Commercial
         </p>
 
-        <button
+        <Link
+          href="/portfolio"
           className="
-          mt-10
-          border
-          border-white
-          px-10
-          py-4
-          uppercase
-          tracking-[0.2em]
-          hover:bg-white
-          hover:text-black
-          transition-all
-          duration-500
+            mt-10
+            inline-block
+            border
+            border-white
+            px-10
+            py-4
+            uppercase
+            tracking-[0.2em]
+            hover:bg-white
+            hover:text-black
+            transition-all
+            duration-500
           "
         >
           View Portfolio
-        </button>
+        </Link>
 
       </div>
 
