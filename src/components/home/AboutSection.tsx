@@ -1,19 +1,24 @@
-import Image from "next/image";
-
 export default function AboutSection() {
   return (
     <section className="bg-neutral-950 py-32">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
 
-        {/* Foto */}
+        {/* Profile Video */}
         <div className="flex justify-center">
-          <Image
-            src="/profile.png"
-            alt="Rizky Putra"
-            width={500}
-            height={600}
-            className="rounded-xl object-cover shadow-2xl"
-          />
+          <div className="relative w-full max-w-[500px] aspect-[4/5] overflow-hidden rounded-xl bg-black shadow-2xl">
+
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-contain"
+            >
+              <source src="/profile-video.mp4" type="video/mp4" />
+            </video>
+
+          </div>
         </div>
 
         {/* About */}
