@@ -1,78 +1,239 @@
-import { client } from '@/sanity/lib/client'
-import { contactQuery } from '@/sanity/lib/queries'
-import { Mail, Phone, MapPin, MessageSquare } from 'lucide-react'
+import {
+  Mail,
+  Phone,
+  MapPin,
+  MessageSquare,
+  Instagram,
+  Youtube,
+} from 'lucide-react'
 
 export const revalidate = 0
 
-export default async function ContactPage() {
-  const contact = await client.fetch(contactQuery)
+export default function ContactPage() {
+  // =========================
+  // CONTACT DATA
+  // =========================
 
-  const waNumber = contact?.whatsappNumber || '6281234567890'
-  const waMsg = encodeURIComponent(contact?.whatsappMessage || 'Halo, saya tertarik berkonsultasi mengenai project.')
-  const waUrl = `https://wa.me/${waNumber}?text=${waMsg}`
+  const email = 'ichi.putra74@gmail.com'
+  const phone = '6285921671851'
+  const location = 'Jakarta & Bali, Indonesia'
+
+  const whatsappMessage = encodeURIComponent(
+    'Halo Rizky, saya tertarik untuk bekerja sama untuk project video.'
+  )
+
+  const whatsappUrl = `https://wa.me/${phone}?text=${whatsappMessage}`
 
   return (
-    <div className="pt-32 pb-24 max-w-5xl mx-auto px-6">
-      <div className="text-center max-w-2xl mx-auto mb-16">
-        <span className="text-xs uppercase tracking-ultra text-luxury-gold block mb-2">Hubungi Kami</span>
-        <h1 className="text-4xl md:text-5xl font-serif text-white font-light">Mulai Kolaborasi</h1>
+    <div className="pt-32 pb-24 max-w-6xl mx-auto px-6">
+
+      {/* HEADER */}
+      <div className="max-w-3xl mb-20">
+
+        <span className="text-xs uppercase tracking-[0.4em] text-luxury-gold">
+          Contact
+        </span>
+
+        <h1 className="text-5xl md:text-7xl font-serif text-white font-light mt-5">
+          Let's Create
+          <br />
+          Something Great.
+        </h1>
+
+        <p className="text-neutral-400 mt-8 max-w-2xl leading-8">
+          Have a project in mind? Whether it's a luxury villa,
+          real estate, hotel, commercial campaign, or aerial production,
+          feel free to get in touch.
+        </p>
+
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-neutral-900 border border-neutral-800 p-8 sm:p-12">
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-xl font-serif text-white mb-2">Informasi Kontak</h3>
-            <p className="text-xs text-neutral-400 font-light">
-              Silakan hubungi kami untuk pertanyaan lisensi, reservasi jadwal shooting, atau konsultasi ide project.
-            </p>
+
+      {/* CONTACT BOX */}
+      <div className="grid md:grid-cols-2 gap-16">
+
+        {/* LEFT */}
+        <div>
+
+          <p className="text-xs uppercase tracking-[0.35em] text-neutral-500 mb-8">
+            Get In Touch
+          </p>
+
+          <div className="space-y-7">
+
+            {/* EMAIL */}
+            <div className="flex items-center gap-5">
+
+              <div className="w-12 h-12 border border-neutral-800 flex items-center justify-center">
+                <Mail className="w-5 h-5 text-luxury-gold" />
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-widest text-neutral-500">
+                  Email
+                </p>
+
+                <p className="text-white mt-1">
+                  {email}
+                </p>
+              </div>
+
+            </div>
+
+
+            {/* PHONE */}
+            <div className="flex items-center gap-5">
+
+              <div className="w-12 h-12 border border-neutral-800 flex items-center justify-center">
+                <Phone className="w-5 h-5 text-luxury-gold" />
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-widest text-neutral-500">
+                  WhatsApp
+                </p>
+
+                <p className="text-white mt-1">
+                  +{phone}
+                </p>
+              </div>
+
+            </div>
+
+
+            {/* LOCATION */}
+            <div className="flex items-center gap-5">
+
+              <div className="w-12 h-12 border border-neutral-800 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-luxury-gold" />
+              </div>
+
+              <div>
+                <p className="text-xs uppercase tracking-widest text-neutral-500">
+                  Based In
+                </p>
+
+                <p className="text-white mt-1">
+                  {location}
+                </p>
+              </div>
+
+            </div>
+
           </div>
 
-          <div className="space-y-4 text-sm">
-            <div className="flex items-center gap-4 text-neutral-300">
-              <Mail className="w-5 h-5 text-luxury-gold" />
-              <span>{contact?.email || 'studio@luxemedia.com'}</span>
-            </div>
-            <div className="flex items-center gap-4 text-neutral-300">
-              <Phone className="w-5 h-5 text-luxury-gold" />
-              <span>+{contact?.whatsappNumber || '6281234567890'}</span>
-            </div>
-            <div className="flex items-center gap-4 text-neutral-300">
-              <MapPin className="w-5 h-5 text-luxury-gold" />
-              <span>{contact?.location || 'Jakarta & Bali, Indonesia'}</span>
-            </div>
-          </div>
 
-          <div className="pt-4">
+          {/* WHATSAPP BUTTON */}
+          <div className="mt-12">
+
             <a
-              href={waUrl}
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 w-full py-4 bg-luxury-gold text-black font-semibold text-xs uppercase tracking-widest hover:bg-white transition-colors"
+              className="
+                inline-flex
+                items-center
+                justify-center
+                gap-3
+                w-full
+                md:w-auto
+                px-10
+                py-5
+                bg-luxury-gold
+                text-black
+                font-semibold
+                text-xs
+                uppercase
+                tracking-[0.2em]
+                hover:bg-white
+                transition-all
+                duration-300
+              "
             >
-              <MessageSquare className="w-4 h-4" /> Chat Langsung via WhatsApp
+              <MessageSquare className="w-4 h-4" />
+              Chat via WhatsApp
             </a>
+
           </div>
+
         </div>
 
-        <div className="flex flex-col justify-center border-t md:border-t-0 md:border-l border-neutral-800 pt-8 md:pt-0 md:pl-12">
-          <h4 className="text-xs uppercase tracking-widest text-luxury-gold font-mono mb-4">Social Media & Portofolio</h4>
-          <ul className="space-y-3">
-            {contact?.socialLinks?.map((soc: any, i: number) => (
-              <li key={i}>
-                <a
-                  href={soc.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-300 hover:text-luxury-gold text-sm flex items-center justify-between border-b border-neutral-800/80 pb-2 transition-colors"
-                >
-                  <span>{soc.platform}</span>
-                  <span className="text-xs font-mono text-neutral-500">→</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+
+        {/* RIGHT */}
+        <div className="border border-neutral-800 p-10 flex flex-col justify-between">
+
+          <div>
+
+            <p className="text-xs uppercase tracking-[0.35em] text-luxury-gold">
+              What I Do
+            </p>
+
+            <h2 className="text-3xl md:text-4xl text-white font-light mt-5 leading-tight">
+              Cinematic Visuals
+              <br />
+              That Elevate
+              <br />
+              Your Brand.
+            </h2>
+
+          </div>
+
+
+          {/* SERVICES */}
+          <div className="mt-16 space-y-4">
+
+            <div className="border-b border-neutral-800 pb-4 text-neutral-300">
+              Luxury Villa & Real Estate
+            </div>
+
+            <div className="border-b border-neutral-800 pb-4 text-neutral-300">
+              Hotel & Hospitality
+            </div>
+
+            <div className="border-b border-neutral-800 pb-4 text-neutral-300">
+              Drone Aerial Production
+            </div>
+
+            <div className="border-b border-neutral-800 pb-4 text-neutral-300">
+              Commercial Video
+            </div>
+
+          </div>
+
         </div>
+
       </div>
+
+
+      {/* SOCIAL MEDIA */}
+      <div className="border-t border-neutral-900 mt-24 pt-12">
+
+        <p className="text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+          Follow My Work
+        </p>
+
+        <div className="flex gap-8">
+
+          <a
+            href="https://www.instagram.com/ichiputra?utm_source=qr"
+            className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"
+          >
+            <Instagram className="w-4 h-4" />
+            Instagram
+          </a>
+
+          <a
+            href="#"
+            className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"
+          >
+            <Youtube className="w-4 h-4" />
+            YouTube
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
   )
 }
