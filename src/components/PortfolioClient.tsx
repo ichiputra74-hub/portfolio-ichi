@@ -46,7 +46,7 @@ export default function PortfolioClient({
   const isPhoto = activeCategory.toLowerCase() === 'photo'
 
   return (
-    <div className="pt-32 pb-24 max-w-7xl mx-auto px-6">
+    <div className="pt-32 pb-24 max-w-7xl mx-auto px-0 sm:px-6">
 
       {/* HEADER */}
       <div className="text-center max-w-2xl mx-auto mb-16">
@@ -104,13 +104,14 @@ export default function PortfolioClient({
         <motion.div
           layout
           className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-3
-            gap-x-6
-            gap-y-12
-          "
+  grid
+  grid-cols-3
+  sm:grid-cols-2
+  lg:grid-cols-3
+  gap-0
+  lg:gap-x-6
+  lg:gap-y-12
+"
         >
 
           <AnimatePresence mode="popLayout">
@@ -130,7 +131,7 @@ export default function PortfolioClient({
                 <Link href={`/portfolio/${project.slug}`}>
 
                   {/* PHOTO */}
-                  <div className="relative aspect-[4/5] overflow-hidden bg-neutral-900">
+                 <div className="relative aspect-square sm:aspect-[4/5] overflow-hidden bg-neutral-900">
 
                     {project.thumbnail && (
 
@@ -158,8 +159,7 @@ export default function PortfolioClient({
 
 
                   {/* PHOTO INFO */}
-                  <div className="pt-4">
-
+                  <div className="hidden sm:block pt-4">
                     <div className="flex items-center justify-between gap-4">
 
                       <h3 className="text-white text-lg font-light">
@@ -202,12 +202,13 @@ export default function PortfolioClient({
         <motion.div
           layout
           className="
-            grid
-            grid-cols-1
-            md:grid-cols-2
-            lg:grid-cols-3
-            gap-8
-          "
+  grid
+  grid-cols-3
+  md:grid-cols-2
+  lg:grid-cols-3
+  gap-0
+  lg:gap-8
+"
         >
 
           <AnimatePresence mode="popLayout">
@@ -227,7 +228,7 @@ export default function PortfolioClient({
                 <Link href={`/portfolio/${project.slug}`}>
 
                   {/* THUMBNAIL */}
-                  <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
+                 <div className="relative aspect-square md:aspect-[4/3] overflow-hidden bg-neutral-900">
 
                     {project.thumbnail && (
 
@@ -255,7 +256,7 @@ export default function PortfolioClient({
 
 
                   {/* PROJECT INFO */}
-                  <div className="mt-4">
+                  <div className="hidden md:block mt-4">
 
                     <p className="text-luxury-gold text-xs uppercase tracking-widest">
                       {project.category}
