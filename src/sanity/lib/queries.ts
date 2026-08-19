@@ -75,3 +75,24 @@ export const contactQuery = groq`
     socialLinks
   }
 `
+
+// Fetch 3 featured portfolio items for Home
+export const featuredPortfoliosQuery = groq`
+  *[_type == "portfolio" && defined(order)] 
+  | order(order asc) [0...3] {
+    _id,
+    title,
+    "slug": slug.current,
+    order,
+    "category": category->title,
+    "categorySlug": category->slug.current,
+    thumbnail,
+    videoUrl,
+    youtubeUrl,
+    client,
+    year,
+    location,
+    software,
+    tags
+  }
+`

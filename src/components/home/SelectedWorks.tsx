@@ -23,7 +23,7 @@ export default function SelectedWorks({ projects }: Props) {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-     {projects.slice(0,6).map((project:any)=>(
+     {projects.slice(0,3).map((project:any)=>(
   <Link
     key={project._id}
     href={`/portfolio/${project.slug}`}

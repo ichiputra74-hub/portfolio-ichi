@@ -4,6 +4,7 @@ export const portfolioSchema = defineType({
   name: 'portfolio',
   title: 'Portfolio Project',
   type: 'document',
+
   fields: [
     defineField({
       name: 'title',
@@ -11,6 +12,7 @@ export const portfolioSchema = defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
+
     defineField({
       name: 'slug',
       title: 'Slug URL',
@@ -21,6 +23,17 @@ export const portfolioSchema = defineType({
       },
       validation: (Rule) => Rule.required(),
     }),
+
+    // ⭐ TAMPIL DI HOME
+    defineField({
+      name: 'featured',
+      title: 'Tampilkan di Home',
+      type: 'boolean',
+      description:
+        'Aktifkan jika project ini ingin ditampilkan sebagai karya unggulan di halaman Home.',
+      initialValue: false,
+    }),
+
     defineField({
       name: 'order',
       title: 'Urutan Tampilan',
@@ -28,6 +41,7 @@ export const portfolioSchema = defineType({
       description: 'Nomor urut prioritas (1 = paling awal)',
       initialValue: 1,
     }),
+
     defineField({
       name: 'category',
       title: 'Kategori',
@@ -35,6 +49,7 @@ export const portfolioSchema = defineType({
       to: [{ type: 'category' }],
       validation: (Rule) => Rule.required(),
     }),
+
     defineField({
       name: 'thumbnail',
       title: 'Thumbnail Utama (Sanity / Cloudinary)',
@@ -44,40 +59,56 @@ export const portfolioSchema = defineType({
       },
       validation: (Rule) => Rule.required(),
     }),
+
     defineField({
       name: 'gallery',
       title: 'Gallery Foto',
       type: 'array',
-      of: [{ type: 'image', options: { hotspot: true } }],
+      of: [
+        {
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
       description: 'Kumpulan foto pendukung resolusi tinggi',
     }),
+
     defineField({
       name: 'videoUrl',
       title: 'Direct Video URL (Cloudinary / MP4 Direct)',
       type: 'url',
-      description: 'Direct MP4 video URL dari Cloudinary atau host lainnya',
+      description:
+        'Direct MP4 video URL dari Cloudinary atau host lainnya',
     }),
+
     defineField({
       name: 'youtubeUrl',
       title: 'Link YouTube',
       type: 'url',
-      description: 'Link video YouTube (e.g. https://www.youtube.com/watch?v=xxx)',
+      description:
+        'Link video YouTube',
     }),
+
     defineField({
       name: 'client',
       title: 'Client',
       type: 'string',
     }),
+
     defineField({
       name: 'year',
       title: 'Tahun',
       type: 'string',
     }),
+
     defineField({
       name: 'location',
       title: 'Lokasi',
       type: 'string',
     }),
+
     defineField({
       name: 'software',
       title: 'Software yang Digunakan',
@@ -87,6 +118,7 @@ export const portfolioSchema = defineType({
         layout: 'tags',
       },
     }),
+
     defineField({
       name: 'tags',
       title: 'Tags / Keywords',
@@ -96,6 +128,7 @@ export const portfolioSchema = defineType({
         layout: 'tags',
       },
     }),
+
     defineField({
       name: 'description',
       title: 'Deskripsi Detail',
@@ -103,6 +136,7 @@ export const portfolioSchema = defineType({
       of: [{ type: 'block' }],
     }),
   ],
+
   orderings: [
     {
       title: 'Manual Order',
