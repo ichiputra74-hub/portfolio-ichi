@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ contact }: { contact: any }) {
   return (
     <footer className="bg-black border-t border-neutral-900">
 
