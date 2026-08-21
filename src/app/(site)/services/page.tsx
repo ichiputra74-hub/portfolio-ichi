@@ -4,26 +4,26 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Luxury Villa & Real Estate Cinematography',
-      desc: 'Pengambilan gambar arsitektur dan interior vila mewah serta properti komersial dengan pencahayaan sinematik dan gerakan kamera yang presisi.',
-      features: ['Walkthrough 4K High Dynamic Range', 'Color Grading Sinematik Klasik', 'Format Reels/TikTok & Landscape HQ'],
+      desc: 'Cinematic photography and videography for luxury villas, real estate, and commercial properties, with a focus on architecture, interiors, lighting, and precise camera movement.',
+      features: ['4K HDR Property Walkthroughs', 'Cinematic Color Grading', 'Reels, TikTok & High-Quality Landscape Formats'],
     },
     {
       title: 'Drone & Aerial Photography',
-      desc: 'Pengambilan gambar udara resolusi tinggi menggunakan drone berlisensi resmi untuk menangkap keindahan lanskap lokasi properti.',
-      features: ['Pilot Lisensi Resmi', 'Pengambilan Foto/Video 4K', 'Izin Terbang & Pemetaan Area'],
+      desc: 'High-resolution aerial photography and cinematography designed to showcase the scale, surroundings, architecture, and unique character of each property.',
+      features: ['4K Aerial Photography & Videography', 'Landscape & Social Media Formats ','Cinematic Aerial Sequences'],
     },
     {
       title: 'Commercial & Brand Storytelling',
-      desc: 'Produksi video iklan komersial dari konsep awal, pembuatan storyboard, eksekusi shooting, hingga tahapan pasca-produksi.',
-      features: ['Konseptualisasi & Storyboard', 'Perekaman Audio Profesional', 'Editing & Sound Design Khusus'],
+      desc: 'End-to-end commercial video production, from creative concepts and storyboarding to production, editing, and final delivery.',
+      features: ['Creative Concept & Storyboarding', 'Cinematic Video Production', 'Editing & Custom Sound Design'],
     },
   ]
 
   return (
     <div className="pt-32 pb-24 max-w-7xl mx-auto px-6">
       <div className="text-center max-w-2xl mx-auto mb-20">
-        <span className="text-xs uppercase tracking-ultra text-luxury-gold block mb-2">Layanan Utama</span>
-        <h1 className="text-4xl md:text-5xl font-serif text-white font-light">Layanan Profesional</h1>
+        <span className="text-xs uppercase tracking-ultra text-luxury-gold block mb-2">Our Services</span>
+        <h1 className="text-4xl md:text-5xl font-serif text-white font-light">Professional Service</h1>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
