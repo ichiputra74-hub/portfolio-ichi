@@ -37,7 +37,7 @@ export default async function ProjectDetailPage({
         className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-neutral-400 hover:text-luxury-gold mb-12 transition-colors"
       >
         <ArrowLeft className="w-4 h-4" />
-        Kembali ke Portfolio
+        Back to Portfolio
       </Link>
 
       {/* Header */}
@@ -68,7 +68,7 @@ export default async function ProjectDetailPage({
 
           <div>
             <span className="text-neutral-500 uppercase tracking-widest font-mono block mb-1">
-              Tahun
+              Year
             </span>
 
             <span className="text-neutral-200 font-medium">
@@ -78,7 +78,7 @@ export default async function ProjectDetailPage({
 
           <div>
             <span className="text-neutral-500 uppercase tracking-widest font-mono block mb-1">
-              Lokasi
+              Location
             </span>
 
             <span className="text-neutral-200 font-medium">
@@ -145,7 +145,7 @@ export default async function ProjectDetailPage({
         <div className="mb-16 aspect-video w-full flex items-center justify-center bg-neutral-900 border border-neutral-800">
 
           <p className="text-neutral-500 text-sm">
-            Tidak ada media untuk project ini.
+            There is media for this project.
           </p>
 
         </div>
@@ -162,7 +162,7 @@ export default async function ProjectDetailPage({
         <div className="max-w-3xl mx-auto mb-16 text-neutral-300 font-light leading-relaxed">
 
           <h3 className="text-xs uppercase tracking-widest text-luxury-gold font-mono mb-4">
-            Tentang Project
+            About Project
           </h3>
 
           <PortableText value={project.description} />
@@ -189,7 +189,7 @@ export default async function ProjectDetailPage({
 
             <Play className="w-4 h-4 fill-current" />
 
-            Tonton di YouTube
+            Watch in YouTube
 
           </a>
 
@@ -207,7 +207,7 @@ export default async function ProjectDetailPage({
         <section className="mt-20 border-t border-neutral-900 pt-16">
 
           <h3 className="text-xs uppercase tracking-ultra text-luxury-gold mb-8 font-mono">
-            Galeri Foto High-Res
+            Photo galery High-Res
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
