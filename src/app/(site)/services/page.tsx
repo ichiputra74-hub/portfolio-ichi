@@ -3,19 +3,19 @@ import { CheckCircle2 } from 'lucide-react'
 export default function ServicesPage() {
   const services = [
     {
-      title: 'Luxury Villa & Real Estate Cinematography',
-      desc: 'Cinematic photography and videography for luxury villas, real estate, and commercial properties, with a focus on architecture, interiors, lighting, and precise camera movement.',
-      features: ['4K HDR Property Walkthroughs', 'Cinematic Color Grading', 'Reels, TikTok & High-Quality Landscape Formats'],
+      title: 'VIDEO, COLOR GRADING & DRONE',
+      desc: 'Producing cinematic visual content through video editing, professional color grading, and drone cinematography, with a focus on properties and commercial projects.',
+      features: ['Video Editing & Color Grading', 'Drone Pilot & Aerial Cinematography', 'Property & Commercial Video'],
     },
     {
-      title: 'Drone & Aerial Photography',
-      desc: 'High-resolution aerial photography and cinematography designed to showcase the scale, surroundings, architecture, and unique character of each property.',
-      features: ['4K Aerial Photography & Videography', 'Landscape & Social Media Formats ','Cinematic Aerial Sequences'],
+      title: 'CONTENT STRATEGY & PLANNING',
+      desc: 'Developing structured content plans and creative concepts based on audience, brand identity, trends, and business objectives.',
+      features: ['Content Strategy & Planning', 'Social Media Content Planning','Creative Concept Development'],
     },
     {
-      title: 'Commercial & Brand Storytelling',
-      desc: 'End-to-end commercial video production, from creative concepts and storyboarding to production, editing, and final delivery.',
-      features: ['Creative Concept & Storyboarding', 'Cinematic Video Production', 'Editing & Custom Sound Design'],
+      title: 'COPYWRITING & BRAND STORYTELLING',
+      desc: 'Crafting clear, engaging, and persuasive copy that communicates brand value and connects with the target audience.',
+      features: ['Copywriting', 'Brand Messaging & Storytelling'],
     },
   ]
 

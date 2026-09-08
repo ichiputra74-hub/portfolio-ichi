@@ -42,7 +42,7 @@ export default async function AboutPage() {
 
             <p className="mt-8 text-lg text-neutral-400 leading-8 max-w-xl">
               {about?.subheadline ||
-                'I am Rizky Putra, a Drone Pilot and Video Editor specializing in luxury villas, real estate, hotels, and commercial videos.'}
+                'I am Rizky Putra, a Drone Pilot, Video Editor, and Content Planner specializing in cinematic property videos in Bali.'}
             </p>
 
             <div className="mt-8 text-neutral-400 leading-8 max-w-xl">
@@ -56,9 +56,8 @@ export default async function AboutPage() {
             <div className="mt-10">
 
               <p className="text-sm text-neutral-500 leading-7 max-w-xl">
-                I help businesses showcase their properties through
-                elegant, cinematic visuals that enhance their value
-                and create a lasting impression.
+              With experience in content planning, copywriting, drone cinematography, video editing, and color grading,
+               I create engaging visual content that helps villas, hotels, and real estate properties stand out.
               </p>
 
             </div>

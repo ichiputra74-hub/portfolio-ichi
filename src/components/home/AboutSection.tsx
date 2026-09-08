@@ -33,10 +33,10 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-neutral-400 leading-8 mt-8">
-            I am a Drone Pilot and Video Editor specializing in luxury villas,
-            real estate, hotels, and commercial videos.
-            I help businesses showcase their properties through elegant,
-            cinematic visuals that enhance their value and leave a lasting impression.
+           I am a Drone Pilot, Content Planner, Copywriter, and Video Editor with experience in developing creative content strategies and producing engaging visual content.
+           I conduct content research based on current trends, target audiences, and brand needs, then develop structured content plans and compelling copywriting for social media.
+           I also create and edit visual content, including drone footage, video editing, and color grading, to deliver polished and visually engaging content that aligns with the brand’s identity and objectives.
+
           </p>
 
         </div>

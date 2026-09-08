@@ -26,7 +26,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 text-lg md:text-2xl text-gray-300 tracking-[0.15em]">
-          Luxury Villa • Drone • Commercial
+          Content Planning • Copywriting • Drone • Video Editing
         </p>
 
         <Link

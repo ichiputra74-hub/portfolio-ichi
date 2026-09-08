@@ -17,9 +17,7 @@ export default function Footer({ contact }: { contact: any }) {
             </p>
 
             <p className="mt-6 max-w-xl text-neutral-500 leading-7 text-sm">
-              Drone Pilot & Video Editor specializing in luxury villas,
-              real estate, hotels, and commercial productions.
-              Creating cinematic visuals that elevate brands and properties.
+              Drone Pilot & Video Editor creating cinematic aerial footage for luxury villas, real estate, hotels, and commercial content. Skilled in video editing, color grading, content planning, and copywriting.
             </p>
 
             <p className="mt-6 text-xs uppercase tracking-[0.3em] text-neutral-600">
