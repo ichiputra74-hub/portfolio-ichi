@@ -107,7 +107,7 @@ export default async function ProjectDetailPage({
 
       {project.videoUrl ? (
 
-        <div className="mb-16 relative aspect-video w-full overflow-hidden bg-black border border-neutral-800">
+        <div className="mb-16 w-full flex justify-center bg-black border border-neutral-800">
 
           <video
             key={project.videoUrl}
@@ -118,7 +118,7 @@ export default async function ProjectDetailPage({
             loop
             playsInline
             preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="w-full h-auto max-h-[80vh] object-contain"
           >
             Your browser does not support the video tag.
           </video>
