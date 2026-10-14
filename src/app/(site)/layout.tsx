@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans, Cinzel } from 'next/font/google'
 import Navbar from '../../components/layout/Navbar'
@@ -15,17 +16,8 @@ const cinzel = Cinzel({
   variable: '--font-serif',
 })
 
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio-ichi-8rg6.vercel.app'),
-
-  verification: {
-    google: 'oSWrErwG2nzGwUUhD7Qg1I2JbpJaEEa_MjMgI92zOkI',
-  },
-
-  // Pertahankan semua konfigurasi metadata kamu yang lainnya.
-}
-
 
   title: {
     default: 'Rizky Putra | Video Editor & Drone Videographer',
@@ -36,6 +28,10 @@ export const metadata: Metadata = {
     'Explore Rizky Putra’s creative portfolio featuring cinematic video editing, drone videography, luxury villa visuals, real estate films, and commercial content in Bali and Indonesia.',
 
   applicationName: 'Rizky Putra Portfolio',
+
+  verification: {
+    google: 'oSWrErwG2nzGwUUhD7Qg1I2JbpJaEEa_MjMgI92zOkI',
+  },
 
   openGraph: {
     type: 'website',
