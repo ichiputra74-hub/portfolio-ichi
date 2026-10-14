@@ -15,8 +15,17 @@ const cinzel = Cinzel({
   variable: '--font-serif',
 })
 
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio-ichi-8rg6.vercel.app'),
+
+  verification: {
+    google: 'oSWrErwG2nzGwUUhD7Qg1I2JbpJaEEa_MjMgI92zOkI',
+  },
+
+  // Pertahankan semua konfigurasi metadata kamu yang lainnya.
+}
+
 
   title: {
     default: 'Rizky Putra | Video Editor & Drone Videographer',
