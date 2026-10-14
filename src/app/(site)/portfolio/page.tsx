@@ -12,7 +12,7 @@ import PortfolioClient from '@/components/PortfolioClient'
 export const metadata: Metadata = {
   title: 'Video Editing & Drone Portfolio in Bali | Rizky Putra',
   description:
-    'Explore Rizky Putra’s portfolio of cinematic video editing, drone videography, luxury villa films, real estate visuals, and creative commercial content in Bali, Indonesia.',
+    'Explore Rizky Putra’s portfolio of cinematic video editing, drone videography, luxury villa films, real estate visuals, and commercial content in Bali, Indonesia.',
   alternates: {
     canonical: '/portfolio',
   },
