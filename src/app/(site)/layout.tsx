@@ -16,9 +16,43 @@ const cinzel = Cinzel({
 })
 
 export const metadata: Metadata = {
-  title: 'LUXE STUDIO | Portfolio Cinema & Creative Direction',
+  metadataBase: new URL('https://portfolio-ichi-8rg6.vercel.app'),
+
+  title: {
+    default: 'Rizky Putra | Video Editor & Drone Videographer',
+    template: '%s | Rizky Putra',
+  },
+
   description:
-    'Portofolio Sinematografi, Luxury Villa, Drone Footage, Real Estate & Commercial Video Production.',
+    'Explore Rizky Putra’s creative portfolio featuring cinematic video editing, drone videography, luxury villa visuals, real estate films, and commercial content in Bali and Indonesia.',
+
+  applicationName: 'Rizky Putra Portfolio',
+
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://portfolio-ichi-8rg6.vercel.app',
+    siteName: 'Rizky Putra Portfolio',
+    title: 'Rizky Putra | Video Editor & Drone Videographer',
+    description:
+      'Cinematic video editing, drone videography, luxury villa films, real estate visuals, and commercial content.',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rizky Putra | Video Editor & Drone Videographer',
+    description:
+      'Explore cinematic video editing, drone footage, luxury villa visuals, and commercial video projects.',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 }
 
 export const revalidate = 0
