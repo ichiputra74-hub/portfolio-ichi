@@ -17,7 +17,9 @@ export const metadata: Metadata = {
     canonical: '/portfolio',
   },
   openGraph: {
-    title: 'Video Editing & Drone Portfolio in Bali | Rizky Putra',
+    title: {
+  absolute: 'Video Editing & Drone Portfolio in Bali | Rizky Putra',
+},
     description:
       'Discover cinematic video editing, drone footage, luxury property films, and commercial visual projects by Rizky Putra in Bali, Indonesia.',
     url: '/portfolio',
