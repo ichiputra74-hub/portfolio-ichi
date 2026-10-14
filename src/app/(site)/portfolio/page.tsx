@@ -1,4 +1,4 @@
-```tsx
+
 import type { Metadata } from 'next'
 
 import { client } from '@/sanity/lib/client'
@@ -40,4 +40,3 @@ export default async function PortfolioPage() {
     />
   )
 }
-```
