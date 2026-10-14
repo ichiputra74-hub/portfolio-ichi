@@ -1,6 +1,24 @@
+
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { client } from '@/sanity/lib/client'
 import { aboutQuery } from '@/sanity/lib/queries'
+
+export const metadata: Metadata = {
+  title: 'About Rizky Putra | Video Editor & Content Creator in Bali',
+  description:
+    'Meet Rizky Putra, a video editor, drone videographer, and content planner specializing in cinematic property videos, color grading, and social media content in Bali, Indonesia.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About Rizky Putra | Video Editor & Content Creator in Bali',
+    description:
+      'Discover Rizky Putra’s creative background in video editing, drone cinematography, content planning, copywriting, and cinematic property visuals.',
+    url: '/about',
+    type: 'website',
+  },
+}
 
 export const revalidate = 0
 
@@ -9,29 +27,22 @@ export default async function AboutPage() {
 
   return (
     <main className="bg-black min-h-screen pt-32 pb-24">
-
       <section className="max-w-7xl mx-auto px-6">
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-
           {/* FOTO */}
           <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-900">
-
             <Image
               src="/profile.png"
-              alt="Rizky Putra"
+              alt="Rizky Putra, video editor and drone videographer in Bali"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
-
           </div>
-
 
           {/* CONTENT */}
           <div>
-
             <p className="uppercase tracking-[0.4em] text-luxury-gold text-xs mb-5">
               ABOUT
             </p>
@@ -46,28 +57,20 @@ export default async function AboutPage() {
             </p>
 
             <div className="mt-8 text-neutral-400 leading-8 max-w-xl">
-              {about?.bio && (
-                <p>
-                  {about.bio}
-                </p>
-              )}
+              {about?.bio && <p>{about.bio}</p>}
             </div>
 
             <div className="mt-10">
-
               <p className="text-sm text-neutral-500 leading-7 max-w-xl">
-              With experience in content planning, copywriting, drone cinematography, video editing, and color grading,
-               I create engaging visual content that helps villas, hotels, and real estate properties stand out.
+                With experience in content planning, copywriting, drone
+                cinematography, video editing, and color grading, I create
+                engaging visual content that helps villas, hotels, and real
+                estate properties stand out.
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
-
     </main>
   )
 }
