@@ -32,7 +32,7 @@ export default async function AboutPage() {
           {/* FOTO */}
           <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-900">
             <Image
-              src="/profile.png"
+              src="/profile-about.jpg"
               alt="Rizky Putra, video editor and drone videographer in Bali"
               fill
               priority
